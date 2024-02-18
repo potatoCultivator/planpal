@@ -61,6 +61,14 @@
     transition: transform 160ms var(--ease-out-quad);
 }
 
+.dropdown-button img {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-button[data-state="open"] img {
+    transform: rotate(180deg);
+}
+
 .dropdown-button:hover,
 .dropdown-button[data-state="open"] {
     background: var(--color-bg-tertiary);

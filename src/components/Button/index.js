@@ -5,6 +5,7 @@
 import { useState } from 'react';
 import './Button.css';
 import DropdownSymbol from './dropdown-symbol.png';
+import ImageAnimation from './ImageAnimation';
 
 const Button = ({ text, color, shape, onClick, hasDropdownSymbol }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,6 +17,7 @@ const Button = ({ text, color, shape, onClick, hasDropdownSymbol }) => {
                 onClick={onClick}
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
+                data-state={isDropdownOpen ? 'open' : ''}
             >
                 {text}
                 {hasDropdownSymbol && <img src={DropdownSymbol} className="dropdown-symbol" alt="Dropdown Symbol" />}
@@ -30,6 +32,8 @@ const Button = ({ text, color, shape, onClick, hasDropdownSymbol }) => {
                     {/* Add more dropdown items here */}
                 </div>
             )}
+            <div>
+        </div>
         </div>
     );
 };
