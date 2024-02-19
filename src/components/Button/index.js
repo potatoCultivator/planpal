@@ -6,6 +6,7 @@ import { useState } from 'react';
 import './Button.css';
 import DropdownSymbol from './dropdown-symbol.png';
 import ImageAnimation from './ImageAnimation';
+import Planpal from '../pl';
 
 const Button = ({ text, color, shape, onClick, hasDropdownSymbol }) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -27,7 +28,7 @@ const Button = ({ text, color, shape, onClick, hasDropdownSymbol }) => {
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
                     >
-                    {/* Content for the dropdown panel */}
+                    {/* Add more dropdown items here */}
                     <a href="/planpal" className="dropdown-item">PlanPal</a>
                     {/* Add more dropdown items here */}
                 </div>

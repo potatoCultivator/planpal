@@ -25,12 +25,17 @@
 import React from 'react';
 import Navbar from '../src/components/NavBar/index';
 import './App.css';
+import Planpal from './components/Planpal/index';
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      {/* The rest of your app goes here */}
+      { 
+        <div className="Ppal">
+          <Planpal />
+        </div>
+      }
     </div>
   );
 };
